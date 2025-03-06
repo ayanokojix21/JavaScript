@@ -23,3 +23,40 @@ object
 
 console.log(typeof null); // object
 console.log(typeof undefined); // undefined
+
+// **************************************************** Datatype Summary **************************************************
+
+// Primitive : Call by value
+
+// 7 Types : String, Number, Boolean, null, undefined, symbol, BigInt
+// JavaScript is dynamically typed language i.e the type of variables are determined at run-time you don't need to specify it at the time of coding
+
+// Non-Primitive : Call by Reference
+
+// Arrays, Objects, Functions,
+
+// --------------------------------------------------- Memory Allocation --------------------------------------------------------
+
+// Stack (Primitive) 
+
+let company = "google";
+let newCompany = company;
+newCompany = "microsoft";
+
+console.table([company,newCompany]);
+
+// It only gives the copy of originial variable so change in one won't change the original variable
+
+// Heap (Non-Primitive)
+
+let MyObj = {
+    name:"nish",
+    age:18
+}
+
+let newObj = MyObj;
+newObj.age = 21;
+
+console.table([MyObj.age,newObj.age])
+
+// It gives the reference of original value so change in one change the original value 
